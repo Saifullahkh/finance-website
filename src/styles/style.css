@@ -1,0 +1,16 @@
+:root {
+  --primary: #38A1FF ;
+  --secondary: #F4B100;
+  --black: #171717;
+  --white: #FFFFFF;
+  --white-brand: #DCEEFF;
+  --gray: #7F7F7F;
+}
+
+.header{
+    max-width: 1330px !important;
+    margin: 10px auto;
+    padding: 12px 40px;
+    background-color: var(--primary);
+    border-radius: 15px;
+}
