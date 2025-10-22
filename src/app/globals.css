@@ -21,7 +21,7 @@ body {
 }
 
 .main-div {
-  max-width: 1330px;
-  margin: 0 auto;
+ max-width: 1330px !important;
+    margin: 10px auto;
   background-color: var(--background);
 }

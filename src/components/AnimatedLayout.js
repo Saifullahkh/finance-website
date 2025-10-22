@@ -3,6 +3,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import '@/app/globals.css'
 
 export default function AnimatedLayout({ children }) {
   const pathname = usePathname();
@@ -16,7 +17,9 @@ export default function AnimatedLayout({ children }) {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.4 }}
       >
-        {children}
+        <div className="main-div">
+           {children}
+        </div>
       </motion.div>
     </AnimatePresence>
   );
