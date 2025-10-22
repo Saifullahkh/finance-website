@@ -7,10 +7,22 @@
   --gray: #7F7F7F;
 }
 
+
+
 .header{
     max-width: 1330px !important;
     margin: 10px auto;
     padding: 12px 40px;
-    background-color: var(--primary);
     border-radius: 15px;
+}
+
+.footer{
+   max-width: 1330px !important;
+    margin: 10px auto;
+}
+
+@media  (max-width: 480px){
+  .header{
+    padding: 12px 20px;
+  }
 }
