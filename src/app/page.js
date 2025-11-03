@@ -48,7 +48,7 @@ export default function Home() {
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-gray-900">
             Empower Your Financial Future with{" "}
-            <span className="text-amber-500 bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
               FinWise
             </span>
           </h1>

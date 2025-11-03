@@ -62,15 +62,10 @@ function Header() {
     }
   }
 
-  const navItemVariants = {
-    closed: { opacity: 0, y: -10 },
-    open: { opacity: 1, y: 0 }
-  }
-
   return (
     <motion.header 
       className={`header bg-gradient-to-br from-gray-900 to-blue-900 transition-all duration-300 `}
-      initial={{ y: -100 }}
+      initial={{ y: 30 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
