@@ -141,11 +141,10 @@ function Header() {
               <div className={`py-1 border-t ${
                 scrolled ? 'border-gray-200' : 'border-white/20'
               }`}>
-                <nav className="flex flex-col space-y-4">
+                <nav className="flex flex-col space-y-2">
                   {navItems.map((item, index) => (
                     <motion.div
                       key={item.name}
-                      variants={navItemVariants}
                       initial="closed"
                       animate="open"
                       transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -165,19 +164,15 @@ function Header() {
                   {/* Mobile CTA Button */}
                   <Link
                     href="/contact"
-                    variants={navItemVariants}
-                    initial="closed"
-                    animate="open"
-                    transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
                     className="pt-4"
                   >
                     <Button 
                       theme={scrolled ? "warning" : "primary"} 
-                      size="lg"
-                      className="w-full justify-center text-lg py-3"
+                      size="md"
+                      className="w-full justify-center "
                       onClick={() => setMenuOpen(false)}
                     >
-                      Get Started
+                      Contact
                     </Button>
                   </Link>
                 </nav>
