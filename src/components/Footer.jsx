@@ -25,7 +25,7 @@ function Footer() {
 
   return (
     <motion.footer
-      className="bg-gradient-to-br from-gray-900 to-blue-900 text-white rounded-t-3xl lg:rounded-t-[4rem] mt-20 px-4 sm:px-6 lg:px-8 py-12 lg:py-16"
+      className="footer bg-gradient-to-br from-gray-900 to-blue-900 text-white rounded-t-3xl lg:rounded-t-[4rem] mt-20 px-4 sm:px-6 lg:px-8 py-12 lg:py-16"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -128,20 +128,6 @@ function Footer() {
               Cookie Policy
             </motion.a>
           </div>
-
-          {/* Designer Credit */}
-          <motion.div
-            className="text-center lg:text-right"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-blue-100 text-sm lg:text-base">
-              Designed by{" "}
-              <span className="text-amber-400 font-semibold">Saif Ullah</span>
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </motion.footer>
