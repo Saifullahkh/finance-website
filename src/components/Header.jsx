@@ -40,7 +40,7 @@ function Header() {
     { name: 'Services', href: '/services' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: '/blogs' },
   ]
 
   const mobileMenuVariants = {
@@ -63,20 +63,12 @@ function Header() {
   }
 
   return (
-    <motion.header 
-      className={`header bg-gradient-to-br from-gray-900 to-blue-900 transition-all duration-300 `}
-      initial={{ y: 30 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+    <header 
+      className={`header bg-gradient-to-br from-gray-900 to-blue-900 transition-all duration-300 `}>
       <div className=" ">
         <div className="flex items-center justify-between ">
           {/* Logo */}
-          <motion.div 
-            className="flex items-center gap-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
+          <div  className="flex items-center gap-2">
             <Link href="/" onClick={() => setMenuOpen(false)}>
               <Image 
                 src={logo} 
@@ -89,17 +81,12 @@ function Header() {
                 }`}
               />
             </Link>
-          </motion.div>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+              <div key={item.name}>
                 <Link
                   href={item.href}
                   className={`relative font-medium text-lg transition-colors duration-300 hover:text-amber-500 ${
@@ -109,25 +96,21 @@ function Header() {
                   {item.name}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 hover:w-full"></span>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </nav>
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:block">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
+            <Link href="/contact">
               <Button 
                 theme={scrolled ? "warning" : "primary"} 
                 size="md"
                 className="shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                Get Started
+                Contact
               </Button>
-            </motion.div>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -180,7 +163,8 @@ function Header() {
                   ))}
                   
                   {/* Mobile CTA Button */}
-                  <motion.div
+                  <Link
+                    href="/contact"
                     variants={navItemVariants}
                     initial="closed"
                     animate="open"
@@ -195,14 +179,14 @@ function Header() {
                     >
                       Get Started
                     </Button>
-                  </motion.div>
+                  </Link>
                 </nav>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-    </motion.header>
+    </header>
   )
 }
 

@@ -160,7 +160,7 @@ export default function Page() {
 
               <Animation as="div"
                 direction="right"
-                 className='bg-[var(--primary)] rounded-2xl px-6 md:px-12 py-12 md:py-22 flex flex-col justify-between'
+                 className='bg-gradient-to-br from-gray-900 to-blue-900 rounded-2xl px-6 md:px-12 py-12 md:py-22 flex flex-col justify-between'
               >
                 <div className=''>
                   <h2 className="text-4xl sm:text-5xl  font-medium text-white mb-2">
